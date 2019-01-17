@@ -1,11 +1,29 @@
+/**
+ * User data
+ */
 export interface UserData {
-  username: string;
-  email: string;
-  token: string;
-  bio: string;
-  image?: string;
+    /**
+     * Username
+     */
+    username: string;
+    /**
+     * Email
+     */
+    email: string;
+    /**
+     * Personal token
+     */
+    token: string;
+    /**
+     * Biography
+     */
+    bio: string;
+    /**
+     * User avatar
+     */
+    image?: string;
 }
 
 export interface UserRO {
-  user: UserData;
+    user: UserData;
 }
