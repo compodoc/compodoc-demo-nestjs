@@ -1,0 +1,23 @@
+{
+  "name": "compodoc-demo-nestjs",
+  "version": "1.0.0",
+  "description": "This project was forked from https://github.com/lujakob/nestjs-realworld-example-app.",
+  "main": "index.js",
+  "scripts": {
+    "doc": "npx compodoc -p tsconfig.json -n 'Nest RealWorld app documentation'",
+    "doc:serve": "npm run doc && npx compodoc -s"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/compodoc/compodoc-demo-nestjs.git"
+  },
+  "author": "Vincent Ogloblinsky + lu.jakob@googlemail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/compodoc/compodoc-demo-nestjs/issues"
+  },
+  "homepage": "https://github.com/compodoc/compodoc-demo-nestjs#readme",
+  "devDependencies": {
+    "@compodoc/compodoc": "^1.1.7"
+  }
+}

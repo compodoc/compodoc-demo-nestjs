@@ -1,0 +1,24 @@
+language: node_js
+branches:
+    only:
+        - master
+node_js:
+    - '9'
+cache:
+    directories:
+        - node_modules
+install:
+    - npm install
+script:
+    - npm run doc
+deploy:
+    skip_cleanup: true
+    provider: script
+    script: ./deploy.sh
+    on:
+        branch: master
+        node: '9'
+env:
+    global:
+        - GIT_DEPLOY_REPO=https://$GITHUB_TOKEN@github.com/compodoc/compodoc-demo-nestjs.git
+        - secure: tkTTo86QTiOg4L6Ae2i0LI25XfAW23Z9RfXxkYL4vt1AMHxsw9a1raxebao/K6Nb2OzwpRQhdQbTaxA7LN63BT4jdcHOuQLMTpqLIL82rwg01FF0CO5J/R9Tf5TCIvZYTgGl2GJcZLVcxo82jW63h4+kf2WfTUS7ZBs2rWWoSkO/b85FEefRa+g6ukpCiW51V1HELQnLNNSOzrDSfe9ZyDvDNOneQEhEgGvftzL4lY0Womhi8pJa9BTffwN5bWxvmIblCDdcMuhjD7izh7U6gEalKIQ7dhoFIthcpemdEdxLa4M9nJazNtf9wLJv1Kg0oRFidq5Qq8bPY7SJ6L5b/bKARoRuLoj/drBNwg9WaDTob+wz6xsiWyASWOT5/qyQ5AiwyzAP0XQKi6yRNULxPxBPDmEoJqhR8xRb0q1Nlpep/plbrI6K93GiUjB25hn8CMEg90p6E/CnuRr94GKEXfDvg2nNKfNSMijzLO5MibU2pjWJVcH5vHsnnawJxUSk2HlULHUpTSMWTeY3b5hUZSl3lCvLrUhUncIUEL/rWXMRwpHNv3eff7d6i+BHYQsThhDs9KkliRRtYXlL1jVB1jXOPjtm1o4ynMguJzqlxK0WKcFyU+YPfNPc0Zj22OJ3YczUISwdq7VwAE6H7Xv/KNh2cTZRspDZ3i19mZ19lSo=
